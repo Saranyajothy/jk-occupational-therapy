@@ -8,5 +8,29 @@
 </head>
 <body>
     <h1>This is to do : Saar</h1>
+    <table border="1" >
+        <tr>
+            <td>FirstName: </td>
+            <td>LastName: </td>
+            <td>Address: </td>
+            <td>Email: </td>
+            <td>code</td>
+            <td></td>
+        </tr>
+        {% for appointment in appointments %}
+           
+            <tr>
+                <td>{{ appointment.firstname }}</td>
+                <td>{{ appointment.lastname }}</td>
+                <td>{{ appointment.address }}</td>
+                <td>{{ appointment.email }}</td>
+                <td>{{ appointment.mobile_ext }}</td>
+                <td>{{ appointment.mobile }}</td>
+                <td>{{ appointment.complaint_description }}</td>
+                <td>{{ appointment.appointment_date_time }}</td>
+                <td>{{ appointment.status }}</td> 
+            </tr>
+        {% endfor %}
+    </table>
 </body>
 </html>

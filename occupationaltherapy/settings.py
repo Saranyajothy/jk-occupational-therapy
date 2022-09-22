@@ -27,6 +27,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+CSRF_TRUSTED_ORIGINS = ['https://8000-saranyajoth-jkoccupatio-2tcsptbr8m6.ws-eu64.gitpod.io']
+
+
 
 # Application definition
 
