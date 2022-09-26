@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="POST" action="add">
+        {% csrf_token %}
+        <label class=" text-center col-sm-4 col-lg-4" >
+            Firstname
+           </label>
+           <input type="text" id="first_name" name="first_name" class="form-control"
+           placeholder="Name"required>
+           <label class=" text-center col-sm-4 col-lg-4">
+            Lastname
+            </label>
+            <input type="text"id="last_name"name="last_name" class="form-control"
+            placeholder="Name"required> 
+        
+            <label class=" text-center col-sm-4 col-lg-4">
+                Mobile-ext
+            </label>
+            <input type="text" id="mobile-ext" name="mobile-ext" class="form-control"
+            placeholder="123"required>
+        
+            <label class="text-center col-sm-4 col-lg-4">
+                Mobile
+            </label>
+            <input type="text" id="mobile" name="mobile" class="form-control"
+            placeholder="123"required>
+            <label class=" text-center col-sm-4 col-lg-4">
+                Date
+              </label>
+              <input type="date"id="date" name="date" class="form-control">
+        
+              <label class=" text-center col-sm-4 col-lg-4">
+                Time
+             </label>
+             <input type="time"id="time" name="time" class="form-control">
+        
+             <label class=" text-center col-sm-4 col-lg-4">
+                Symptoms
+             </label>
+             <textarea id="symptoms"  name="symptoms" class="form-control" required></textarea>
+
+             <div>
+                <p>
+                    <button type="submit">Add Appointment</button>
+                </p>
+            </div>
+        </form>
+</body>
+</html>

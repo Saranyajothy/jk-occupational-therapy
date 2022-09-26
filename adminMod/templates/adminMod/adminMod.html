@@ -11,7 +11,7 @@
 
     <table>
         <tr>
-            <td><a href = "/add">Add an Appoinment</a>
+            <td><a href = "/add_item">Add an Appoinment</a>
 
             </td>
         </tr>
@@ -30,6 +30,11 @@
            s
             <tr>
                 <td>{{ appointment.firstname }}</td>
+                <td>
+                    <a href="/edit/{{ appointment.firstname }}">
+                        <button>Edit</button>
+                    </a>
+                </td>
                 <td>{{ appointment.lastname }}</td>
                 <td>{{ appointment.address }}</td>
                 <td>{{ appointment.email }}</td>

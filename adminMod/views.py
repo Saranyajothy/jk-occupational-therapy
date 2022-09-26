@@ -3,6 +3,7 @@ from .models import adminMod_appointment, Item
 from datetime import datetime
 from django.db import models
 from django.utils.dateparse import parse_date, parse_time
+from .forms import ItemForm
 
 
 # Create your views here.
@@ -41,3 +42,15 @@ def add(request):
         address=address, email=email, mobile_ext=mobile_ext, mobile=mobile, complaint_description=problem_description, appointment_date_time=mydatetime,status="New")
         return redirect('adminMod.html')
     return render(request, 'adminMod/add_appointment.html')
+
+    
+def edit_item(request,item_id):
+    item = get_object_or_404(Item, id=item_id)
+    form = ItemForm(instance=item)
+    context = {
+        'form': form
+    }
+    from django.shortcuts import render, redirect, get_object_or_404
+
+
+    return render(request, 'todo/edit_item.html', context)
