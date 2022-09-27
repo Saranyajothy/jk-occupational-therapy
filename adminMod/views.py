@@ -19,11 +19,6 @@ def get_appointments(request):
 
 def add(request):
     if request.method == 'POST':
-        """
-        name = request.POST.get('item_name')
-        done = 'done' in request.POST
-        Item.objects.create(name=name, done=done)"""
-        id_name = request.POST.get('item_name')
         first_name = request.POST.get('first_name')
         last_name = request.POST.get('last_name')
         address = "Sample address"
@@ -40,7 +35,7 @@ def add(request):
         mydatetime = datetime.combine(converted_date, converted_time)
         adminMod_appointment.objects.create(firstname=first_name, lastname=last_name,
         address=address, email=email, mobile_ext=mobile_ext, mobile=mobile, complaint_description=problem_description, appointment_date_time=mydatetime,status="New")
-        return redirect('adminMod.html')
+        return redirect('appointment_success')
     return render(request, 'adminMod/add_appointment.html')
 
     
@@ -54,3 +49,32 @@ def edit_item(request,item_id):
 
 
     return render(request, 'todo/edit_item.html', context)
+
+
+# Create your views here.
+def get_home(request):
+    return render(request, 'adminMod/home.html')
+
+
+def get_about(request):
+    return render(request, 'adminMod/about.html')
+
+
+def get_what_we_do(request):
+    return render(request, 'adminMod/what_we_do.html')
+
+
+def get_appointment(request):
+    return render(request, 'adminMod/appointment.html')
+
+
+def get_assets(request):
+    return render(request, 'adminMod/assets')
+
+
+def get_admin_login(request):
+    return render(request, 'adminMod/admin_login.html')
+
+
+def get_appointment_success(request):
+    return render(request, 'adminMod/appointment_success.html')

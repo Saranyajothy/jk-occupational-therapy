@@ -1,9 +1,7 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -15,44 +13,154 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css" type="text/css" />
-    <link rel="stylesheet" href="home.html">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     
-    <link rel="stylesheet" href="assets/css/style.css">
+     <link rel='shortcut icon' type='image/x-icon' href="{% static 'favicon.ico' %}" />
+
+     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <title>JK Occupational therapy </title>
 </head>
-<body>
-    <header>
-        <div class="row no-gutters">
-            <a class="col-md-4 logo" href="home.html">
-                <img  style="max-height: 125px;"  src="assets/images/logo.png" alt="logo">
+<body class="home">
+        <div class="navbar navbar-expand-lg bg-dark navbar-dark"></div>
+        <div class="p-5 bg-info text-white text-center">
+          <img src="logo.png" alt="logo" class="img-fluid">
+            <h1>
+               JK Ocuupational Therapy
+            </h1>
+            <p>We provide excellent service because We care! We do!</p> 
+          </div>
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+            <div class="container-fluid">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link active hvr-sweep-to-bottom ml-3 mr-3" style="color: yellow;" href="/home"> Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link hvr-sweep-to-bottom ml-3 mr-3" style="color: white;" href="/about">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link hvr-sweep-to-bottom ml-3 mr-3" style="color: white;" href="/what_we_do">What We do</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link hvr-sweep-to-bottom ml-3 mr-3" style="color: white;" href="/appointment">Appointment </a>
+                </li>
+                <!-- <li class="nav-item">
+                  <a class="nav-link hvr-sweep-to-bottom ml-3 mr-3" style="color: white;" href="/contact ">Appointment </a>
+                </li> -->
+              </ul>
+            </div>
+          </nav>
+        <!-- <div class="row no-gutters" style="background-color: #00C5CD">
+            <a class="col-md-4">
+                <img src="assets/images/logo.png"   alt="logo">
             </a>
             <div class="col-md-8">
                 <div class="row no-gutters bg-color-name-title">
                     <div class="col heading">
-                        <h1 class="name">JK Occupational Therapy</h1>
+                        <h1 class="name mt-4 mb-3">JK Occupational Therapy</h1>
                         <h2 class="title"></h2>
                     </div>
                 </div>
-                <div class="row no-gutters">
-                    <div class="col-md-9">
-                        <ul id="nav" class="list-inline menucontainer">
-                            <li class="col-6 col-sm-3 list-inline-item ui-menu-color-home menuitem">
-                                <a href="#" class="hvr-sweep-to-bottom"><i class="fa fa-home" aria-hidden="true"></i><span>Home</span></a>
+                <ul id="nav" class="list-inline menucontainer ml-3 mr-3">
+                            
+                    <li class="col-12  mt- mb-4" style="font-size: 20px;">
+                        <td><a href = "/home"class="hvr-sweep-to-bottom">Home</a></td>
+                        <td><a href = "/about" class="hvr-sweep-to-bottom">About</a></td>
+                        <td><a href = "/what_we_do" class="hvr-sweep-to-bottom">What We do</a></td>
+                        <td><a href = "/appointments" class="hvr-sweep-to-bottom">Appointment</a></td>
+                        <td><a href = "/contact" class="hvr-sweep-to-bottom">Contact</a></td>
+                    </li> -->
+
+                            <!-- <li class="col-6 col-sm-2 mt-3 mb-3 list-inline-item ui-menu-color">
+                                <a href="home.html" target="_self" class="active" class="hvr-sweep-to-bottom"><i class="fa fa-home" aria-hidden="true"></i><span class="ui-menu-color">Home</span></a>
                             </li>
-                            <li class="col-6 col-sm-3 list-inline-item ui-menu-color-resume menuitem">
-                                <a href="#" class="hvr-sweep-to-bottom"><i class="fa fa-graduation-cap" aria-hidden="true"></i><span>About</span></a>
+                             <li class="col-6 col-sm-2 mt-3 mb-3 list-inline-item">
+                                <a href="about.html" target="_self" class="hvr-sweep-to-bottom"><span> OldAbout</span></a> 
                             </li>
-                            <li class="col-6 col-sm-3 list-inline-item ui-menu-color-contact menuitem">
-                                <a href="#" class="hvr-sweep-to-bottom"><i class="fa fa-comment-o" aria-hidden="true"></i><span>What we do</span></a>
+                            <li class="col-6 col-sm-2 mt-3 mb-3 list-inline-item">
+                                <a href="what-we-do.html" target="_self" class="hvr-sweep-to-bottom"></i><span>What we do</span></a>
                             </li>
-                            <li class="col-6 col-sm-3 list-inline-item ui-menu-color-download menuitem">
-                                <a href="#" class="hvr-sweep-to-bottom"><i class="fa fa-download" aria-hidden="true"></i><span>Appointment</span></a>
-                            </li>
+                            <li class="col-6 col-sm-2 mt-3 mb-3 list-inline-item">
+                                <a href="Appointments.html" target="_self" class="hvr-sweep-to-bottom"></i><span>Appointment</span></a>
+                            </li> --> 
                         </ul>
                     </div>
                 </div>
             </div>
-        </div>
-    </header>
+        </div> 
+        <section  class="mx-4 mt-4 px-4 text-align: justify;">
+            <div class="mx-4 px-4 text-align: justify;">
+                <img class="thumbnail mt-5 center"
+                 src="{% static 'images/ot.jpeg' %}"/>
+                <h3 class="mt-5">
+                    Occupational Therapy helps people to
+                    participate in everyday meaningful
+                    activities. <br><small> - Association of Occupational Therapists in
+                    Ireland.</small>
+                </h3>
+                <p class="mt-3">
+                    Occupational Therapists work with people of all ages, helping them
+                    to carry out the activities that they need or want to do in order to
+                    lead healthy and fulfilling lives. <br> - BRITISH ASSOCIATION OF OCCUPATIONAL
+                    THERAPISTS
+                </p>
+                    <p class="mt-5">
+                       <strong> Occupational therapists (OTs) work to break down the barriers which hold
+                    back individuals in carrying out their day to day activities. </strong>
+                    </p>
+                    <p class="mb-5">
+                        OTs not only look at the physical effects of ageing, injury or disease, but also address the
+                    psycho-social, community and environmental factors that influence functional ability.
+                    An OT will try to find out why you cannot do what you would like or need to do and,
+                    depending on your situation, an OT may assess the following areas:
+                </p>
+                <div class="my-5 ">
+                  <ul class="col-lg-12 text-white bg-dark">
+                  <li class="ml-3 pt-3">What materials you need to participate in the occupation e.g. assistive technology,
+                      furniture, cooking utensils, clothes and computers</li>
+                  <li class="ml-3 pt-3">The social and emotional support available to you in your home, school, work and
+                      community</li>
+                  <li class="ml-3 py-3 ">The environment you are having difficulty in e.g. home, school, work or community</li>
+                  </ul>
+                </div>
+            </div>
+        </section>
+              <div class="container bg-secondary text-white my-5 px-5 border border-warning mt ">
+                <h2 class="text-center pt-3" style="color: yellow;">Contact</h2>
+                <p class="text-center">Opening Times Monday To Sunday 9am to 7pm</p>
+                <div class="row">
+                <div class="col-md-4 text-center">
+                  <h6 style="color: yellow;"><strong>Phone Number:</strong></h6>
+                  +353 873407834
+                </div>
+                <div class="col-md-4 text-center justify mb-4">
+                  <h6 style="color: yellow;"><strong>Address:</strong></h6>
+                  JK Ocuupational Therapy,<br>
+                  18 El dorado,<br>
+                  Limerick.<br>
+                  Ireland.
+                </div>
+                <div class="col-md-4 text-center">
+                  <h6 style="color: yellow;"><strong>Email:</strong></h6>
+                  ramjothikumar@gmail.com
+                </div>
+              </div>
+            </div>
+          </div> 
+          <div class="navbar navbar-expand-lg bg-dark navbar-dark"></div>
+          <div class=" p-5 bg-info text-white text-center">
+              <p class="mr-2" style="color: yellow;">Connect with us</p>
+              <div class="smed">
+              <a href=""><i class="fa-brands fa-square-twitter text-white fa-2x mr-md-4 mr-4"></i></a>
+              <a href=""><i class="fa-brands fa-facebook text-white fa-2x mr-md-4 mr-4" ></i></a>
+              <a href=""><i class="fa-brands fa-linkedin text-white fa-2x mr-md-4 mr-4"></i></a>
+              <a href=""><i class="fa-brands fa-youtube text-white fa-2x mr-md-4 mr-4"></i></a>
+              </div>    
+          </div>
+          <div class="navbar navbar-expand-lg bg-dark navbar-dark"></div>   
+      </body>
+      <script src="https://kit.fontawesome.com/af7da2c3f6.js" crossorigin="anonymous"></script>  
+        
 </body>
 </html>
