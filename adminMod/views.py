@@ -35,7 +35,7 @@ def add(request):
         mydatetime = datetime.combine(converted_date, converted_time)
         adminMod_appointment.objects.create(firstname=first_name, lastname=last_name,
         address=address, email=email, mobile_ext=mobile_ext, mobile=mobile, complaint_description=problem_description, appointment_date_time=mydatetime,status="New")
-        return redirect('appointment_success')
+        return redirect('appointment_success.html')
     return render(request, 'adminMod/add_appointment.html')
 
     

@@ -29,6 +29,6 @@ urlpatterns = [
     path('what_we_do', get_what_we_do, name='get_what_we_do'),
     path('appointment', get_appointment, name='get_appointment'),
     path('admin_login', get_admin_login, name='admin_login'),
-    path('appointment_success', get_appointment_success, name='get_appointment_success')
+    path('appointment_success.html', get_appointment_success, name='get_appointment_success')
 
 ]
