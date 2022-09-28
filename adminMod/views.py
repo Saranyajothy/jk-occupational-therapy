@@ -68,8 +68,8 @@ def get_appointment(request):
     return render(request, 'adminMod/appointment.html')
 
 
-def get_assets(request):
-    return render(request, 'adminMod/assets')
+def get_static(request):
+    return render(request, 'adminMod/static')
 
 
 def get_admin_login(request):

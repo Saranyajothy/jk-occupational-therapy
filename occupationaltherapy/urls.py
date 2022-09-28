@@ -30,4 +30,5 @@ urlpatterns = [
     path('admin_login', get_admin_login, name='admin_login'),
     path('appointment_success.html', get_appointment_success, name='get_appointment_success'),
     path('do_authenticate', do_authenticate, name='do_authenticate')
+    # path('static', get_static, name='get_static')
 ]
