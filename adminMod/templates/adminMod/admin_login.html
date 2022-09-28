@@ -25,7 +25,10 @@
         <title>JK Occupational therapy </title>
     </head>
     <body class="bg-info">
-                <div class="container container_fluid mt-5  pt-5 col-sm-4 col-lg-4  border-radius: 6px;">
+        <div>
+            <div class="navbar navbar-expand-lg bg-dark navbar-dark"></div>
+            <div class="navbar navbar-expand-lg bg-dark navbar-dark"></div>
+                <div class="container container_fluid mt-5  pt-5 col-sm-4 col-lg-4 ">
                     <div class="row">
                         <div  class="my-3 px-3" style="background-color: orange; border-radius: 6px;">
                             <h2 class="text-center my-3 px-3" >
@@ -33,7 +36,7 @@
                             </h2>
                         <form method="POST" action="add">
                             {% csrf_token %}
-                              <div class="form-group row">
+                              <div class="row">
                                   <label class=" col-sm-6 col-lg-6 pl-4" >
                                        Username
                                   </label>
@@ -42,7 +45,7 @@
                                       placeholder="Name"required>
                                   </div>
                                 </div>
-                                <div class="form-group row">
+                                <div class="row">
                                 <label class="col-sm-6 col-lg-6 pl-4 ">
                                     Password
                                 </label>
@@ -60,6 +63,7 @@
                                     </div>
                         </form>   
                     </div>
-                </div>   
+                </div> 
+            </div> 
     </body>
 </html>
