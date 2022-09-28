@@ -78,3 +78,7 @@ def get_admin_login(request):
 
 def get_appointment_success(request):
     return render(request, 'adminMod/appointment_success.html')
+
+
+def do_authenticate():
+    return render(request, 'adminMod/adminMod.html')

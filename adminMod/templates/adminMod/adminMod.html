@@ -4,43 +4,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"  
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <title>Document</title>
 </head>
-<body>
-    <h1>This is to do : Saar</h1>
+<body class="bg-info">
+    <h1 class="ml-5 mt-5">Patient appointment list</h1>
 
     <table>
         <tr>
-            <td><a href = "/add_item">Add an Appoinment</a>
+            <td><a href = "/add_item"></a>
 
             </td>
         </tr>
     </table>
-
-    <table border="1" >
-        <tr>
-            <td>FirstName: </td>
-            <td>LastName: </td>
-            <td>Email: </td>
-            <td>Mobile Ext: </td>
-            <td>Mobile: </td>
-            <td>Address: </td>
-            <td>Symptoms</td>
-            <td>Date & Time</td>
+    <table border="1" class="m-5" >
+        <tr style="table-layout: 1px; border-collapse">
+            <td class="text-center bg-white" > <strong>FirstName</strong> </td>
+            <td class="text-center bg-white" ><strong>LastName</strong></td>
+            <td class="text-center bg-white" ><strong>Email</strong></td>
+            <td class="text-center bg-white" ><strong>Mobile Ext</strong></td>
+            <td class="text-center bg-white" ><strong>Mobile</strong></td>
+            <td class="text-center bg-white" ><strong>Address</strong></td>
+            <td class="text-center bg-white" ><strong>Symptoms</strong></td>
+            <td class="text-center bg-white" ><strong>Date & Time</strong></td>
         </tr>
         {% for appointment in appointments %}
             <tr>
-                <td>{{ appointment.firstname }}   <a href="/edit/{{ appointment.firstname }}">
-                    <button>Edit</button>
+                <td style=" background-color: #d0d5d5;" class="text-center">{{ appointment.firstname }}   <a href="/edit/{{ appointment.firstname }}">
+                    
                 </a></td>
                    
-                <td>{{ appointment.lastname }}</td>
-                <td>{{ appointment.email }}</td>
-                <td>{{ appointment.mobile_ext }}</td>
-                <td>{{ appointment.mobile }}</td>
-                <td>{{ appointment.address }}</td>
-                <td>{{ appointment.complaint_description }}</td>
-                <td>{{ appointment.appointment_date_time }}</td>
+                <td class="text-center" >{{ appointment.lastname }}</td>
+                <td style=" background-color: #d0d5d5;" class="text-center">{{ appointment.email }}</td>
+                <td class="text-center">{{ appointment.mobile_ext }}</td>
+                <td style=" background-color: #d0d5d5;" class="text-center">{{ appointment.mobile }}</td>
+                <td class="text-center">{{ appointment.address }}</td>
+                <td style=" background-color: #d0d5d5;" class="text-center">{{ appointment.complaint_description }}</td>
+                <td class="text-center">{{ appointment.appointment_date_time }}</td>
             </tr>
         {% endfor %}
     </table>

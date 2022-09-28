@@ -25,20 +25,19 @@
         <title>JK Occupational therapy </title>
     </head>
     <body>
-        <table class="table table-striped">
-            <thead>
-              <tr>
-                <th scope="col">Nos</th>
-                <th scope="col">Firstname</th>
-                <th scope="col">Lastname</th>
-                <th scope="col">Email</th>
-                <th scope="col">Mobile-ext</th>
-                <th scope="col">Mobile</th>
-                <th scope="col">Date</th>
-                <th scope="col">Time</th>
-                <th scope="col">Address</th>
-                <th scope="col">Symptoms</th>
-              </tr>
-            </thead>
+        
+        <form method="POST" action="do_authenticate">
+            {% csrf_token %} 
+            <label class=" text-center col-sm-4 col-lg-4" >
+                UserName
+                </label>
+            <input type="text" id="user_name" name="user_name" class="form-control"
+                placeholder="Name"required>
+            <label class=" text-center col-sm-4 col-lg-4">
+                Password
+                </label>
+            <input type="text"id="user_password" name="user_password" class="form-control"
+                placeholder="Pass"required> 
+            
     </body>
 </html>
