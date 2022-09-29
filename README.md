@@ -72,9 +72,10 @@ A user should go through the site like a purposeful journey and to ensure this,
 
 - What we do page gives meticulous service and assessment of the OT.
 
-- When an enquiry form is submitted, a confirmation message appears with a Thank you note and a link to return back to the home page.
+- When an appointment is booked, they get a  succes note.
+
 ## Logo
-- The logo has a symbol which denotes the power of the feminine.
+- The logo has a symbol which denotes the power o.
 - The name of the dance school is on the logo next to the symbol.
 
 ## Navigation
