@@ -31,7 +31,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['jkot.herokuapp.com', 'localhost', '127.0.01']
 
-CSRF_TRUSTED_ORIGINS = ['https://jkot.herokuapp.com', 'http://jkot.herokuapp.com']
+CSRF_TRUSTED_ORIGINS = [
+    'https://8000-saranyajoth-jkoccupatio-2tcsptbr8m6.ws-eu67.gitpod.io', 
+    'https://jkot.herokuapp.com', 'http://jkot.herokuapp.com'
+]
 
 
 
@@ -131,7 +134,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_URL = '/media/'
