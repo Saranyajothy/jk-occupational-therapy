@@ -7,3 +7,5 @@ psycopg2-binary==2.9.3
 pylint-django==2.5.3
 pylint-plugin-utils==0.7
 sqlparse==0.4.2
+cloudinary==1.26.0
+dj3-cloudinary-storage==0.0.5
