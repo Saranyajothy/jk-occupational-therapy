@@ -29,9 +29,9 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['jkot.herokuapp.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['jkot.herokuapp.com', 'localhost', '127.0.01']
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-saranyajoth-jkoccupatio-2tcsptbr8m6.ws-eu67.gitpod.io']
+CSRF_TRUSTED_ORIGINS = ['https://jkot.herokuapp.com', 'http://jkot.herokuapp.com']
 
 
 
