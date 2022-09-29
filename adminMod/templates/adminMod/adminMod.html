@@ -8,30 +8,31 @@
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <title>Document</title>
 </head>
-<body class="bg-info">
+<body>
     <h1 class="ml-5 mt-5">Patient appointment list</h1>
-
     <table>
         <tr>
-            <td><a href = "/add_item"></a>
-
+            <td>
+                <a class="ml-5 mt-5" style="color: #000;" href="/add"> Add Appointment </a>
             </td>
         </tr>
     </table>
+
+   
     <table border="1" class="m-5" >
         <tr style="table-layout: 1px; border-collapse">
-            <td class="text-center bg-white" > <strong>FirstName</strong> </td>
-            <td class="text-center bg-white" ><strong>LastName</strong></td>
-            <td class="text-center bg-white" ><strong>Email</strong></td>
-            <td class="text-center bg-white" ><strong>Mobile Ext</strong></td>
-            <td class="text-center bg-white" ><strong>Mobile</strong></td>
-            <td class="text-center bg-white" ><strong>Address</strong></td>
-            <td class="text-center bg-white" ><strong>Symptoms</strong></td>
-            <td class="text-center bg-white" ><strong>Date & Time</strong></td>
+            <td class="text-center bg-info" > <strong>FirstName</strong> </td>
+            <td class="text-center bg-info" ><strong>LastName</strong></td>
+            <td class="text-center bg-info" ><strong>Email</strong></td>
+            <td class="text-center bg-info" ><strong>Mobile Ext</strong></td>
+            <td class="text-center bg-info" ><strong>Mobile</strong></td>
+            <td class="text-center bg-info" ><strong>Address</strong></td>
+            <td class="text-center bg-info" ><strong>Symptoms</strong></td>
+            <td class="text-center bg-info" ><strong>Date & Time</strong></td>
         </tr>
         {% for appointment in appointments %}
             <tr>
-                <td style=" background-color: #d0d5d5;" class="text-center">{{ appointment.firstname }}   <a href="/edit/{{ appointment.firstname }}">
+                <td  class="text-center"  style="background-color: #d0d5d5;" >{{ appointment.firstname }}   <a href="/edit/{{ appointment.firstname }}">
                     
                 </a></td>
                    

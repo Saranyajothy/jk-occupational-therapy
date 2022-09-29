@@ -4,6 +4,7 @@ from datetime import datetime
 from django.db import models
 from django.utils.dateparse import parse_date, parse_time
 from .forms import ItemForm
+from django.contrib.auth import authenticate, login
 
 
 # Create your views here.
@@ -80,5 +81,16 @@ def get_appointment_success(request):
     return render(request, 'adminMod/appointment_success.html')
 
 
-def do_authenticate():
+def do_authenticate(request):
+    if request.method == 'POST':
+        username = request.POST.get('user_name')
+        password = request.POST.get('user_password')
+        user = authenticate(username=username, password=password)
+        print("user ...")
+        print(user)
+        if user is not None:
+            """login(request, user)"""
+            return redirect('adminMod.html')
+        else:
+            return render(request, 'adminMod/appointment_success_copy.html')
     return render(request, 'adminMod/adminMod.html')
