@@ -15,7 +15,7 @@ def get_appointments(request):
         'appointments': appointments
     }
 
-    return render(request, 'adminMod/adminMod.html', context)
+    return render(request, 'adminMod/admin_list.html', context)
 
 
 def add(request):
@@ -47,30 +47,24 @@ def edit_item(request,item_id):
         'form': form
     }
     from django.shortcuts import render, redirect, get_object_or_404
-
-
     return render(request, 'todo/edit_item.html', context)
 
 
 # Create your views here.
 def get_home(request):
-    return render(request, 'adminMod/home.html')
+    return render(request, 'home/home.html')
 
 
 def get_about(request):
-    return render(request, 'adminMod/about.html')
+    return render(request, 'home/about.html')
 
 
 def get_what_we_do(request):
-    return render(request, 'adminMod/what_we_do.html')
+    return render(request, 'home/what_we_do.html')
 
 
 def get_appointment(request):
-    return render(request, 'adminMod/appointment.html')
-
-
-def get_static(request):
-    return render(request, 'adminMod/static')
+    return render(request, 'booking/book_appointment.html')
 
 
 def get_admin_login(request):
@@ -78,7 +72,7 @@ def get_admin_login(request):
 
 
 def get_appointment_success(request):
-    return render(request, 'adminMod/appointment_success.html')
+    return render(request, 'booking/appointment_success.html')
 
 
 def do_authenticate(request):
@@ -92,5 +86,5 @@ def do_authenticate(request):
             """login(request, user)"""
             return redirect('adminMod.html')
         else:
-            return render(request, 'adminMod/appointment_success_copy.html')
+            return render(request, 'adminMod/admin_not_found.html')
     return render(request, 'adminMod/adminMod.html')
