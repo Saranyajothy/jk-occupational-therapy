@@ -1,7 +1,9 @@
 ![logo](/readme-images/jk_logo.png)
 # JK Occupational Therapy
 Occupational Therapy helps people to participate in everyday meaningful activities.Occupational Therapists work with people of all ages, helping them to carry out the activities that they need or want to do in order to lead healthy and fulfilling lives.Occupational therapists (OTs) work to break down the barriers which hold
-back individuals in carrying out their day to day activities.
+back individuals in carrying out their day to day activities. When the assessment is complete the occupational therapist will work with the patient to identify goals that Occupational Therapy can help to achieve. They will listen to what is important to you and see if they can either, help restore your ability to do your everyday occupations, or find another way of achieving your goal.
+
+
 
 
 ![responsive](/readme-images/Responsive.png)
@@ -40,24 +42,22 @@ back individuals in carrying out their day to day activities.
 ____
 
 # Vision
-The aim of my project is to create a website for my dance school with an intention to  site for dance lovers and prospective learners of dance. This is for children their parents and mature students who intend to learn or learning Indian classical dance.
+The aim of this project is to create a website for the Occupational therapy with an intention to assist the patient for their day to day activities. This is for elderly people who nedd OT service.
 # User experience
 ## The target audience
-The target audience are the students, parents or guardians who want to enrol a student into dance classes and engage more time with their children in a creative and expressive art form.
+The target audience are the Elderly people, general public, gp, allied health professional, Consultant.
 
-This site will help Culture and heritage organisations, national and local authorities, universities and event management teams to search for Indian traditional dance school for a performance for their events.
 ## User's journey
 A user should go through the site like a purposeful journey and to ensure this,
 
 - The user needs to quickly know the purpose on the site.
 - The user should be able to spontaneously and easily navigate through the site.
-- The user will know about Bharatanatyam dance school, dance school, dance classes details, venue and frequency of classes.
-- The user will get a lively experience of the dance form by viewing the gallery to enjoy dance pictures of students, dance costumes, postures and expressions. 
-- The user will know about the skills of the dance teacher (Guru), qualifications, profile, experience and credentials.
+- The user will know about, What is Occupational Therapy is?, How do they approach the patients, What are the services they do.
+- The user will get to book an appointment for assesment and visit the OT. 
+- The user will know about the skills of the OT, qualifications, profile, experience and credentials.
 - The user will be able to get the required information within a short span of time.
-- The user will find the information in plain and common language.
-- The user will find necessary information to enroll for dance classes.
-- The user will find options to contact the team and to make an inquiry.
+- The user will find the information in plain and common language..
+- The user will find options to contact the team and to make an inquiry and cancelation.
 
 
 # Website structure
@@ -66,11 +66,11 @@ A user should go through the site like a purposeful journey and to ensure this,
 
 - The site has three pages which are easy to navigate.
 
-- Homepage gives information about the dance school, classes, venue and a gallery to view pictures which will enlarge when the cursor is on it.
+- Homepage gives information about the Occupational service.
 
-- The About us page gives detailed information and credentials about the dance teacher.
+- The About us page gives detailed information and credentials about the Occupational Therapist.
 
-- Contact page gives various options for users to contact the team.
+- What we do page gives meticulous service and assessment of the OT.
 
 - When an enquiry form is submitted, a confirmation message appears with a Thank you note and a link to return back to the home page.
 ## Logo
