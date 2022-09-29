@@ -1,2 +1,2 @@
-web: gunicorn jk-occupational-theory.wsgi:application
+web: gunicorn codsStar.wsgi:application
 

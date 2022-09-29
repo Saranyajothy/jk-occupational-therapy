@@ -1,4 +1,4 @@
-![logo](/readme-images/jk_logo.png)
+![logo](assets/readme-images/jk_logo.png)
 # JK Occupational Therapy
 Occupational Therapy helps people to participate in everyday meaningful activities.Occupational Therapists work with people of all ages, helping them to carry out the activities that they need or want to do in order to lead healthy and fulfilling lives.Occupational therapists (OTs) work to break down the barriers which hold
 back individuals in carrying out their day to day activities. When the assessment is complete the occupational therapist will work with the patient to identify goals that Occupational Therapy can help to achieve. They will listen to what is important to you and see if they can either, help restore your ability to do your everyday occupations, or find another way of achieving your goal.
@@ -7,7 +7,8 @@ back individuals in carrying out their day to day activities. When the assessmen
 
 
 ![responsive](/readme-images/Responsive.png)
-[click here to view the site](https://saranyajothy.github.io/danceschool/)
+[click here to view the site](
+)
 # Table of contents
 - [Vision](#vision)
 - [User Experience](#user-experience)
@@ -18,8 +19,8 @@ back individuals in carrying out their day to day activities. When the assessmen
     - [Logo](#logo)
     - [Navigation](#navigation)
     - [Home](#home)
-    - [About us](about-us)
-    - [Contact](#contact)
+    - [About](about)
+    - [What we do](#what-we-do)
     - [Footer](#footer)
 - [Future Features](#future-Features)
 - [Website Surface](#website-Surface)
@@ -62,7 +63,7 @@ A user should go through the site like a purposeful journey and to ensure this,
 
 # Website structure
 ## Features
-- The site has a header with logo and footer.
+- The site has a header navbar with logo and footer.
 
 - The site has three pages which are easy to navigate.
 
@@ -72,7 +73,7 @@ A user should go through the site like a purposeful journey and to ensure this,
 
 - What we do page gives meticulous service and assessment of the OT.
 
-- When an appointment is booked, they get a  succes note.
+- When an appointment is booked, they get a succes note.
 
 ## Logo
 - The logo has a symbol which denotes the namwe of the Therapist.
@@ -80,25 +81,19 @@ A user should go through the site like a purposeful journey and to ensure this,
 ## Navigation
 - The navigation, header and footer are similar for all the pages.
 - The navigation is enabled for all screens such as desktop to mobile.
-- The navigation is placed on the top right corner.
-- When the logo is clicked from the any page, it takes to the home page.
+- The navigation is placed on the left corner of the navbar.
 
-![header](/readme-images/header.png)
+![header](/assets/readme-images/header.png)
 ## Home
-- The home page is aimed to give all details about the dance school.
-- The home page starts with a picture of Lord Shiva, the dancing God and a quote to give value to the dance form.
-- The home page has three sections, which presents information about the dance school, classes and gallery with colourful pictures to bring an experience for global users.
+- The home page is aimed to give all details about the Ocupational THerapy.
+- The home page starts with a picture of Occupational therapy.
+- The home page has contact details.
 
-- To give clear instructions about the classes offered, a table with three columns is illustrated to give precise information about level, duration of dance classes and venue with frequency of classes.
+![home.png](/assets/readme-images/home.png)
 
-![Dancing-god.png](/readme-images/Dancing-god.png)
+![contact](/readme-images/contact.png)
 
-![school.png](/readme-images/school.png)
-
-![timings](/readme-images/timings.png)
-
-![gallery](/readme-images/gallery.png)
-## About us
+## About
 - A traditional dance school is valued by The Guru. Users should know about Guru’s qualification, skills, experience and various credentials.
 
 - The About us page introduces the teacher with four distinctive pictures of Guru’s dance postures involved to highlight the grace, complexity and flexibility of postures.
@@ -109,20 +104,12 @@ A user should go through the site like a purposeful journey and to ensure this,
 
 ![about](/readme-images/about.png)
 
-
-## Contact
-- The Contact page has a background picture of an anklet band worn during dance performance.
-- The Contact page has a form where a user can submit their details and write a query.
-- add dumbform for the form submission 
-
-
-![contact](/readme-images/contact.png)
 ## Footer
 - The footer is the same on all the three pages.
 - The footer has social media links.
 - To enable better user experience each social media link in the footer opens in a new tab.
 
-![footer](/readme-images/footer.png)
+![footer](/readme-images/footer.png))
 
 # Future Features
 - A login section could be added to allow students to access dance information.
