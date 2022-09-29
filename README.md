@@ -75,11 +75,10 @@ A user should go through the site like a purposeful journey and to ensure this,
 - When an appointment is booked, they get a  succes note.
 
 ## Logo
-- The logo has a symbol which denotes the power o.
-- The name of the dance school is on the logo next to the symbol.
+- The logo has a symbol which denotes the namwe of the Therapist.
 
 ## Navigation
-- The navigation, header and footer are similar for all the three pages.
+- The navigation, header and footer are similar for all the pages.
 - The navigation is enabled for all screens such as desktop to mobile.
 - The navigation is placed on the top right corner.
 - When the logo is clicked from the any page, it takes to the home page.
