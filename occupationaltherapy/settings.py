@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
+import dj_database_url
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -78,13 +80,16 @@ WSGI_APPLICATION = 'occupationaltherapy.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+# DATABASES = {
+#   'default': {
+#      'ENGINE': 'django.db.backends.sqlite3',
+#      'NAME': BASE_DIR / 'db.sqlite3',
+# }
+# }
 
+DATABASES = {
+   'default': dj_database_url.parse('postgres://ugfksseirdyoyy:fdbf2b002e5e4b6778c018105beee75569b55b40f3928974dcf00e70ad4982ec@ec2-34-241-90-235.eu-west-1.compute.amazonaws.com:5432/db2hl8c0c20vaa')
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
