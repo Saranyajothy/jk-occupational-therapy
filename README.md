@@ -91,12 +91,12 @@ A user should go through the site like a purposeful journey and to ensure this,
 
 ![home.png](/assets/readme-images/home.png)
 
-![contact](/readme-images/contact.png)
+![contact](assets/readme-images/contact.png)
 
 ## About
-- A traditional dance school is valued by The Guru. Users should know about Guru’s qualification, skills, experience and various credentials.
+- About pages gives meticulous note of the Occupational therapist and his regardless work.
 
-- The About us page introduces the teacher with four distinctive pictures of Guru’s dance postures involved to highlight the grace, complexity and flexibility of postures.
+- The About us page introduces the therapist with four distinctive work complexity and flexibility  approach towards his work and patients.
 
 - Below the pictures, a detailed profile is presented about the teacher to give a background, qualification and honors, versatile experience in different dance forms, work experience, global stage appearances and the development of dance school in Ireland.
  
