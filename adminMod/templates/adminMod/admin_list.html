@@ -21,7 +21,6 @@
     <title>JK Occupational therapy </title>
 </head>
 <body>
-<header>
     <div class="navbar navbar-expand-lg bg-dark navbar-dark"></div>
     <div class="p-4 bg-info text-white text-center">
         <img class="my-2 center" style="height: 100px;" src="{% static 'images/jk_logo.png' %}"/>
@@ -52,17 +51,6 @@
       </nav>
       <div class="navbar navbar-expand-lg bg-dark navbar-dark"></div>
 
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"  
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <title>Document</title>
-</head>
-<body> -->
     <h1 class="ml-5 mt-5">Patient appointment list</h1>
     <table>
         <tr>
@@ -98,7 +86,12 @@
                 <td style=" background-color: #d0d5d5;" class="text-center">{{ appointment.complaint_description }}</td>
                 <td class="text-center">{{ appointment.appointment_date_time }}</td>
             </tr>
-        {% endfor %}
     </table>
+  </div>
+    <div>
+      <button type="button">
+        <a href="{% url 'home_html' %}">Go back</a>
+    </button>
+    </div>
 </body>
 </html>
