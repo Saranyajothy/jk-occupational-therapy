@@ -22,6 +22,11 @@ back individuals in carrying out their day to day activities. When the assessmen
     - [About](about)
     - [What we do](#what-we-do)
     - [Footer](#footer)
+- [Technologies Used](#technologies-used)
+    - [Languages Used](#languages-used)
+    - [Libraries/Framework Used](#librariesframework-used)
+    - [Other Technologies](#other-technologies)
+
 - [Future Features](#future-Features)
 - [Website Surface](#website-Surface)
     - [Wireframes](#wireframes)
@@ -30,10 +35,6 @@ back individuals in carrying out their day to day activities. When the assessmen
     - [Typography](#typography)
 - [Testing](#testing)
     - [Code validation](#code-Validation)
-    - [Light house](#light-house)
-    - [Color contrast checker](#color-contrast-checker)
-    - [Responsive testing](#responsive-testing)
-    - [Accessibility testing](#accessibility-testing)
     - [Manual testing](#manual-testing)
     - [Bug fixing](#bug-fixing)
 - [Technology Used](#technology-Used)
@@ -110,6 +111,51 @@ A user should go through the site like a purposeful journey and to ensure this,
 - To enable better user experience each social media link in the footer opens in a new tab.
 
 ![footer](/readme-images/footer.png))
+
+## Technologies Used
+
+  * ## Languages Used
+    * [HTML](https://www.w3schools.com/html/)
+    * [CSS](https://www.w3schools.com/css/)
+    * [Javascript](https://en.wikipedia.org/wiki/JavaScript)
+    * [Python](https://www.python.org/)
+
+    * ## Libraries/Framework Used
+        * [Django](https://www.djangoproject.com/)
+        * [Bootstrap](https://getbootstrap.com/)
+
+    * ### Libraries/Module Installed
+        * asgiref==3.5.2
+        * backports.zoneinfo==0.2.1;python_version<"3.9"
+        * dj-database-url==1.0.0
+        * Django==4.1.1
+        * gunicorn==20.1.0
+        * psycopg2-binary==2.9.3
+        * pylint-django==2.5.3
+        * pylint-plugin-utils==0.7
+        * sqlparse==0.4.2
+        * cloudinary==1.26.0
+        * dj3-cloudinary-storage==0.0.5
+        * django-bootstrap-datepicker-plus==4.0.0
+        * django-bootstrap4==22.2
+        * django-crispy-forms==1.14.0
+        * django-phonenumber-field==7.0.0
+        * phonenumbers==8.12.56
+
+    * ## Other Technologies
+        * [Postgres Database](https://www.postgresql.org/)
+        * [W3School](https://www.w3schools.com/)
+        * [Git](https://git-scm.com/)
+        * [Github](https://github.com/)
+        * [Gitpod workspace](https://gitpod.io/workspaces)
+        * [Heroku](https://dashboard.heroku.com/apps)
+        * [coolors](https://coolors.co/)
+        * [jshint](https://jshint.com/)
+        * [HTML code validator](https://validator.w3.org/)
+        * [CSS code validator](https://jigsaw.w3.org/css-validator/)
+        * [Font Awsome](https://fontawesome.com/)
+        * [Google Fonts](https://fonts.google.com/)
+        * [Slack](https://slack.com/intl/en-gb/)
 
 # Future Features
 - A login section could be added to allow students to access dance information.

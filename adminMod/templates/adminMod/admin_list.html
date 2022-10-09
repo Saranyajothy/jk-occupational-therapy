@@ -55,14 +55,14 @@
     <table>
         <tr>
             <td>
-                <a class="ml-5 mt-5" style="color: #000;" href="/add"> Add Appointment </a>
+                <a class="ml-5 mt-5 btn-warning" style="color: #000;" href="/add"> Add Appointment </a>
             </td>
         </tr>
     </table>
 
    
     <table border="1" class="m-5" >
-        <tr style="table-layout: 1px; border-collapse">
+        <tr style="table-layout: 1px; border-collapse"> 
             <td class="text-center bg-info" > <strong>FirstName</strong> </td>
             <td class="text-center bg-info" ><strong>LastName</strong></td>
             <td class="text-center bg-info" ><strong>Email</strong></td>
@@ -74,10 +74,8 @@
         </tr>
         {% for appointment in appointments %}
             <tr>
-                <td  class="text-center"  style="background-color: #d0d5d5;" >{{ appointment.firstname }}   <a href="/edit/{{ appointment.firstname }}">
-                    
-                </a></td>
-                   
+                <td  class="text-center"  style="background-color: #d0d5d5;" >{{ appointment.firstname }}  
+                </td>     
                 <td class="text-center" >{{ appointment.lastname }}</td>
                 <td style=" background-color: #d0d5d5;" class="text-center">{{ appointment.email }}</td>
                 <td class="text-center">{{ appointment.mobile_ext }}</td>
@@ -85,13 +83,19 @@
                 <td class="text-center">{{ appointment.address }}</td>
                 <td style=" background-color: #d0d5d5;" class="text-center">{{ appointment.complaint_description }}</td>
                 <td class="text-center">{{ appointment.appointment_date_time }}</td>
+                <td>
+                  <a href="/edit/{{ appointment.id }}">
+                      <button>Edit</button>
+                  </a>
+              </td>
+              <td>
+                <a href="/delete/{{ appointment.id }}">
+                    <button>Delete</button>
+                </a>
+            </td>
             </tr>
+        {% endfor %}    
     </table>
   </div>
-    <div>
-      <button type="button">
-        <a href="{% url 'home_html' %}">Go back</a>
-    </button>
-    </div>
 </body>
 </html>

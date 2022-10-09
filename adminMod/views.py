@@ -1,15 +1,15 @@
-from django.shortcuts import render,redirect
-from .models import adminMod_appointment, Item
+from django.shortcuts import render,redirect,get_object_or_404
+from .models import adminMod_appointment, appointment
 from datetime import datetime
 from django.db import models
 from django.utils.dateparse import parse_date, parse_time
-from .forms import ItemForm
+from .forms import AppointmentForm
 from django.contrib.auth import authenticate, login
 
 
 # Create your views here.
 def get_appointments(request):
-    appointments = adminMod_appointment.objects.all()
+    appointments = appointment.objects.all()
 
     context = {
         'appointments': appointments
@@ -39,15 +39,57 @@ def add(request):
         return redirect('appointment_success.html')
     return render(request, 'adminMod/add_appointment.html')
 
-    
-def edit_item(request,item_id):
-    item = get_object_or_404(Item, id=item_id)
-    form = ItemForm(instance=item)
+
+def add_appointment(request):
+    if request.method == 'POST':
+        form = AppointmentForm(request.POST)
+        if form.is_valid():
+            print("form.data")         
+            print(form.data)
+            form.save(commit=True)
+        else:
+            print("form.errors")
+            print(form.errors)
+        return redirect('appointment_success.html')
+    form = AppointmentForm()
     context = {
         'form': form
     }
-    from django.shortcuts import render, redirect, get_object_or_404
-    return render(request, 'todo/edit_item.html', context)
+    return render(request, 'adminMod/add_appointment.html', context)
+
+
+def edit_appointment(request, appointment_id):
+    appointmentObj = get_object_or_404(appointment, id=appointment_id)
+    print("objjj")
+    print(appointmentObj)
+    if request.method == 'POST':
+        form = AppointmentForm(request.POST, instance=appointmentObj)
+        if form.is_valid():
+            form.save(commit=True)
+        else:
+            print("form.errors")
+            print(form.errors)
+        appointments = appointment.objects.all()
+        context = {
+            'appointments': appointments
+        }
+        return render(request, 'adminMod/admin_list.html', context)
+    form = AppointmentForm(instance=appointmentObj)
+    context = {
+        'form': form
+    }  
+    return render(request, 'adminMod/edit_appointment.html', context)
+
+
+def delete_appointment(request, appointment_id):
+    appointmentObj = get_object_or_404(appointment, id=appointment_id)
+    print(appointmentObj)
+    appointmentObj.delete()
+    appointments = appointment.objects.all()
+    context = {
+        'appointments': appointments
+    }
+    return render(request, 'adminMod/admin_list.html', context)
 
 
 # Create your views here.
@@ -64,7 +106,21 @@ def get_what_we_do(request):
 
 
 def get_appointment(request):
-    return render(request, 'booking/book_appointment.html')
+    if request.method == 'POST':
+        form = AppointmentForm(request.POST)
+        if form.is_valid():
+            print("form.data")         
+            print(form.data)
+            form.save(commit=True)
+        else:
+            print("form.errors")
+            print(form.errors)
+        return redirect('appointment_success.html')
+    form = AppointmentForm()
+    context = {
+        'form': form
+    }
+    return render(request, 'booking/book_appointment.html', context)
 
 
 def get_admin_login(request):
@@ -87,4 +143,4 @@ def do_authenticate(request):
             return redirect('adminMod.html')
         else:
             return render(request, 'adminMod/admin_not_found.html')
-    return render(request, 'adminMod/adminMod.html')
+    return render(request, 'admin_list.html')

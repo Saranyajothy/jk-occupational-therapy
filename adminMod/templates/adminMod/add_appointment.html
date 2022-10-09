@@ -52,14 +52,17 @@
       </nav>
       <div class="navbar navbar-expand-lg bg-dark navbar-dark"></div>
    
-    <div class="container container_fluid mt-4 col-sm-4 col-lg-4 ">
+      {% load bootstrap4 %}       {# imports bootstrap3 #}
+      {% bootstrap_javascript jquery='full' %}  {# Embeds Bootstrap JS #}
+      {{ form.media }}
+    <div class="container container_fluid mt-4 col-sm-4 col-lg-4 form-group ">
         <div class="row">
             <div style="background-color: rgb(248, 183, 62); border-radius: 6px;">
-              <h2 class="text-center my-3 px-3" >
+              <h2 class="text-center my-3 px-3 btn" >
                  Add an appointment 
-              </h2>
-            </div>
-            <form method="POST" action="add" class="mt-3">
+                </h2>
+              <!-- 
+              <form method="POST" action="add" class="mt-3">
                 {% csrf_token %}
                   <div class="form-group row mt-8">
                       <label class=" col-sm-4 col-lg-4" >
@@ -94,7 +97,7 @@
                         Mobile-ext
                     </label>
                     <div class="col-sm-8 col-lg-8">
-                        <input type="text" id="mobile-ext" name="mobile-ext" class="form-control"
+                        <input type="number" min_length="3" id="mobile-ext" name="mobile-ext" class="form-control"
                         placeholder="123"required>
                     </div>
                 </div>
@@ -105,7 +108,7 @@
                         Mobile
                     </label>
                     <div class="col-sm-8 col-lg-8">
-                        <input type="text" id="mobile" name="mobile" class="form-control"
+                        <input type="number" id="mobile" name="mobile" class="form-control"
                         placeholder="123"required>
                     </div>
                 </div>
@@ -135,16 +138,14 @@
                     <div class="col-sm-8 col-lg-8">
                         <textarea id="symptoms"  name="symptoms" class="form-control" required></textarea>
                     </div>
-                </div>
-                
-                <div class="form-group row justify-content-end">
-                    <div class=" text-center col-sm-5"> 
-                        <button type="submit" style="background-color: rgb(248, 183, 62);" >
-                           Submit 
-                        </button>
-                    </div>
-                </div>
-
+                </div> -->
+            </div>
+            <form method="POST" action="add" class="mt-3 mb-3">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" style="background-color: rgb(248, 183, 62);">
+                  Submit 
+               </button>
               </form>
           </div>
       </div>
