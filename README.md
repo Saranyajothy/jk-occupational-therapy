@@ -229,7 +229,9 @@ On HTML validation I got a prompt that a section is lacking a Heading. I followe
 
 - [FontAwesome](https://fontawesome.com/kits/deb0a1425e/use?welcome=yes) was used for the icons in the footer.
 Bootstrap was used to style and design the contact page.
+
 # Deployment
+
 Deployment of this website was done through GitHub pages using the following methods:
 
 - Click on the Settings tab in the GitHub repository.
@@ -239,11 +241,12 @@ Deployment of this website was done through GitHub pages using the following met
 - After clicking Save, it can take some time to get a deployed link.
 
 # Credits
+
 - All images in Gallery and About us page of the website were from our Dance school’s archive and I like to give credits to my students and their parents for giving me the consent to use the pictures for this website.
 
-- I learned a lot online via a few YouTube channels, Code with Ania Kubow, Kevin Powell and Kootkot.
+- I learned a lot online via a few YouTube channels, Code, .
 
-- I like to give credits to the Love Running project by Code Institute and it is a wonderful resource for budding developers.
+- I like to give credits the project by Code Institute and it is a wonderful resource for budding developers.
  
 # Acknowledgement
 
