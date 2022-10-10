@@ -1,1 +1,1 @@
-web: gunicornoccupationaltherapy.wsgi:application
+web:gunicornoccupationaltherapy.wsgi:application
