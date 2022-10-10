@@ -1,4 +1,4 @@
-![logo](assets/readme-images/jk_logo.png)
+![logo](/assets/readme-images/jkot_logo.png)
 # JK Occupational Therapy
 Occupational Therapy helps people to participate in everyday meaningful activities.Occupational Therapists work with people of all ages, helping them to carry out the activities that they need or want to do in order to lead healthy and fulfilling lives.Occupational therapists (OTs) work to break down the barriers which hold
 back individuals in carrying out their day to day activities. When the assessment is complete the occupational therapist will work with the patient to identify goals that Occupational Therapy can help to achieve. They will listen to what is important to you and see if they can either, help restore your ability to do your everyday occupations, or find another way of achieving your goal.
@@ -6,7 +6,7 @@ back individuals in carrying out their day to day activities. When the assessmen
 
 
 
-![responsive](/readme-images/Responsive.png)
+![responsive](/assets/readme-images/responsive.png)
 [click here to view the site](
 )
 # Table of contents
@@ -14,6 +14,7 @@ back individuals in carrying out their day to day activities. When the assessmen
 - [User Experience](#user-experience)
     - [The target audience](#target-audience)
     - [User's journey](#user's-journey)
+    - [Admin's journey](#user's-journey)
 - [Website Structure](#website-structure)
     - [Features](#features)
     - [Logo](#logo)
@@ -61,6 +62,11 @@ A user should go through the site like a purposeful journey and to ensure this,
 - The user will find the information in plain and common language..
 - The user will find options to contact the team and to make an inquiry and cancelation.
 
+## Admin Stories 
+- As a site admin I would like to create html file which contains header/nav and footer for multiple pages.
+- As a site admin I would to patience directly book the appointment without login or signin.
+- As a site Admin I would like to redirect users to manage booking page after they submit an appointment form so they can see if their appointment is approved or not.
+- As a site Admin I would like to add, edit and delete which will not allow the user to change or update appointment details once the appointment has been approved.
 
 # Website structure
 ## Features

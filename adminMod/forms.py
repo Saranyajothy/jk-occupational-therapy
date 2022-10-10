@@ -50,6 +50,7 @@ class AppointmentForm(forms.ModelForm):
                                                   'placeholder':
                                                   'Email(required)',
                                                   'class': 'form-control',
+                                                  'type': 'email'
                                                   },
                                            ), 
             'mobile_ext': forms.NumberInput(attrs={'rows': 1, 'cols': 25,

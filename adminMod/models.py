@@ -33,27 +33,26 @@ class Item(models.Model):
     name = models.CharField(max_length=50, null=False, blank=False)
     done = models.BooleanField(null=False, blank=False)
 
+class BookingView(models.Model):
+    form_class = appointment()
+    template_name = "availability.html"
 
-# class appointment(FormView):
-#     form_class = AvailabilityForm
-#     template_name = "add_appointment.html"
-
-#     def form_valid(self, form):
-#         data = form.cleaned_data
-#         bookingList = appointment.objects.filter()
+    def form_valid(self, form):
+        data = form.cleaned_data
+        bookingList = Appointment.objects.filter()
         
-#         for booking in bookingList:
-#             if booking.start > data["end_time"] or booking.end < data["start_time"]:
-#                 booking=appointment.objects.create(
-#                     name=data["name"], 
-#                     start=data["start_time"],
-#                     end=data["end_time"]
-#                     )
-#                 booking.save()
-#                 print(booking.start)
-#                 print(data["start_time"])
-#                 return HttpResponse("can be booked")
-#             else:
-#                 print(booking.start )
-#                 print(data["start_time"])
-#                 return HttpResponse("Cant be booked")
+        for booking in bookingList:
+            if booking.start > data["end_time"] or booking.end < data["start_time"]:
+                booking=Appointment.objects.create(
+                    name=data["name"], 
+                    start=data["start_time"],
+                    end=data["end_time"]
+                    )
+                booking.save()
+                print(booking.start)
+                print(data["start_time"])
+                return HttpResponse("can be booked")
+            else:
+                print(booking.start )
+                print(data["start_time"])
+                return HttpResponse("Cant be booked")
