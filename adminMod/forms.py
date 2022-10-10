@@ -65,7 +65,14 @@ class AppointmentForm(forms.ModelForm):
                                                   'class': 'form-control',
                                                   },
                                            ), 
-                                           
+             'date': forms.NumberInput(attrs={'rows': 1, 'cols': 25,
+                                                  'placeholder':
+                                                  'DD/MM/YYYY',
+                                                  'type': 'date',
+                                                  'class': 'form-control',
+                                                  },
+                                           ), 
+                                                                         
             'time': forms.TimeInput(attrs={'rows': 1, 'cols': 25,
                                                   'placeholder':
                                                   '(required)',
