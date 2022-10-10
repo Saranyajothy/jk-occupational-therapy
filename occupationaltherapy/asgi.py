@@ -1,5 +1,5 @@
 """
-ASGI config for occupationaltheropy project.
+ASGI config for occupationaltherapy project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
