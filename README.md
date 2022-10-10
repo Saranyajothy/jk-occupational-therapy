@@ -99,7 +99,7 @@ A user should go through the site like a purposeful journey and to ensure this,
 
 - The About us page introduces the therapist with four distinctive work complexity and flexibility  approach towards his work and patients.
 
-- Below the pictures, a detailed profile is presented about the teacher to give a background, qualification and honors, versatile experience in different dance forms, work experience, global stage appearances and the development of dance school in Ireland.
+- Below the pictures, a detailed profile is presented about the OT to give a background, qualification and honors, versatile experience in his work, work experience and the development of the services.
  
 ![about-pic](readme-images/about-pic.png)
 
@@ -163,16 +163,19 @@ A user should go through the site like a purposeful journey and to ensure this,
 - The gallery could be made as a separate page and it could contain video performances of students.
 - A secure payment section can be added to allow online fee payment.
 - The syllabus can be added for students for their reference.
+
 # Website Surface
-## Wireframes
+
 ### Desktop
 - [Home](/readme-images/home-d.png)
 - [About](/readme-images/about-desk.png)
 - [contact](/readme-images/contact-d.png)
+
 ### Mobile
 - [Home](/readme-images/home-m.png)
 - [About](/readme-images/about-m.png)
 - [Contact](/readme-images/contact-m.png)
+
 ## Design Choices
 ### Colour Scheme
 ![color-scheme](/readme-images/colour-scheme.png)
@@ -183,6 +186,7 @@ A user should go through the site like a purposeful journey and to ensure this,
 
 ### Typography
 There were two fonts used in this website. [Playfair](https://fonts.google.com/specimen/Playfair+Display) font was used for body and header. [Inria Serif](https://fonts.google.com/specimen/Inria%20Serif)  font was used for the navigation menu.
+
 # Testing
 ## Code validation
 ### Html
@@ -231,14 +235,95 @@ On HTML validation I got a prompt that a section is lacking a Heading. I followe
 Bootstrap was used to style and design the contact page.
 
 # Deployment
+* Git and GitHub are used for version control. Django Python is the backend language, and can't be displayed with GitHub alone, To live preview my project, I used Heroku.
 
-Deployment of this website was done through GitHub pages using the following methods:
+* ## Heroku
+    * ### Deployment Steps On Heroku.
+        * In my project i've used Django v3.2, so I used this command `pip3 install 'django<4' gunicorn` to install django.
+        * So inside the terminal added these libraries:  
+        `pip3 install dj_database_url psycopg2`,  
+        `pip3 install dj3-cloudinary-storage`
+        * Created requirements.txt file where I can save all the libraries i've installed:  
+        `pip3 freeze --local > requirements.txt`
+        * To create my project typed this command:  
+        `django-admin startproject dentist`
+        * To create my app:  
+        `python3 manage.py startapp booking_app`
 
-- Click on the Settings tab in the GitHub repository.
-- Scroll down to the pages tab.
-- Check for the Source tab and click the Main branch.
-- Click Save.
-- After clicking Save, it can take some time to get a deployed link.
+        * to make this app work, Into the setting.py file inside `INSTALLED_APPS` added `booking_app`
+        * to migrate changes typed this command:  
+        `python3 manage.py migrate`
+        * to run the test if the project is working `python3 manage.py runserver`
+
+        * When deploying for the first time on Heroku, you must first register with Heroku.
+        * Create your project name and location.
+        * To add Database into the app, Locate in the Resources Tab, Add-ons, search and add 'Heroku Postgres'
+        * Copy DATABASE_URL value, by going into the Settings Tab, click reveal Config Vars, Copy Text
+        * In your workspace Create new env.py file.
+        * Import os library:  
+            `import os`
+        * Set environment variables:  
+            `os.environ["DATABASE_URL"] = "Heroku DATABASE_URL"`
+        * Add in secret key:  
+            `os.environ["SECRET_KEY"] = "mysecretkey"`
+        * Add Secret Key to Config Vars in Heroku settings:  
+            `SECRET_KEY, "mysecretkey"`
+
+        * Add env.py file to the settings.py file:  
+            `import os`  
+            `import dj_database_url`
+
+            `if os.path.isfile("env.py"):`  
+                `import env`
+        * Remove the insecure secret key and replace - links to the SECRET_KEY variable on Heroku:  
+            `SECRET_KEY = os.environ.get('SECRET_KEY')`
+
+        * Comment out the old DATABASES variable in setting.py file and add this instead:  
+            `DATABASES = { 'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))}`
+
+        * Save all files and Make Migrations:  
+            `python3 manage.py migrate`
+
+        * Make account with Cloudinary To get static and media files.
+        * From Cloudinary Dashboard, Copy your `CLOUDINARY_URL`:  
+        * Add Cloudinary URL to env.py file:  
+            `os.environ["CLOUDINARY_URL"] = "cloudinary://************************"`
+
+        * Add Cloudinary URL to Heroku Config Vars:  
+            `"cloudinary://************************"`
+
+        * Temperoily add DISABLE_COLLECTSTATIC inside the heroku config Vars:  
+            `DISABLE_COLLECTSTATIC, 1`
+
+        * Add Cloudinary Libraries to settings.py installed apps:  
+            `INSTALLED_APPS = ['cloudinary_storage', 'django.contrib.staticfiles', 'cloudinary']`
+
+        * in the settings.py file under the `STATIC_URL = 'static/'` add:  
+            `STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'`  
+            `STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]`  
+            `STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')`  
+
+            `MEDIA_URL = '/media/'`  
+            `DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'`  
+
+        * Place under the BASE_DIR line in settings.py:  
+            `TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')`
+
+        * Change the templates directory to TEMPLATES_DIR Place within the TEMPLATES array:  
+            `TEMPLATES = [{'DIRS': [TEMPLATES_DIR],],},},]`
+
+        * Add Heroku Hostname to ALLOWED_HOSTS:  
+            `ALLOWED_HOSTS = ["hash-dental-care.herokuapp.com", "localhost"]`
+
+        * Create 3 new folders on top level directory:  
+            media, static, templates
+
+        * Create Procfile on the top level directory and inside the file add this:  
+            `web: gunicorn dentist.wsgi`
+        
+        * before deploying on heroku make sure: 
+            `DEBUG = False`
+            Remove `DISABLE_COLLECTSTATIC` from the config vars.
 
 # Credits
 
