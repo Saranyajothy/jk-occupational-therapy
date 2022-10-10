@@ -52,7 +52,6 @@ INSTALLED_APPS = [
     'cloudinary',
     'adminMod',
     'bootstrap4',
-    'bootstrap_datepicker_plus',
     'crispy_forms',
     'phonenumber_field'
 ]
