@@ -1,5 +1,5 @@
 import datetime
-from bootstrap_datepicker_plus.widgets import DatePickerInput
+# from bootstrap_datepicker_plus.widgets import DatePickerInput
 from django import forms
 from .models import appointment
 
@@ -24,15 +24,15 @@ class AppointmentForm(forms.ModelForm):
             }
 
         widgets = {
-            'date': DatePickerInput(
-                options={
-                    "format": "DD/MM/YYYY",
-                    "showClose": True,
-                    "showClear": True,
-                    "showTodayButton": True,
-                    'minDate': CURRENT_DATE,
-                }
-            ),
+            # 'date': DatePickerInput(
+            #     options={
+            #         "format": "DD/MM/YYYY",
+            #         "showClose": True,
+            #         "showClear": True,
+            #         "showTodayButton": True,
+            #         'minDate': CURRENT_DATE,
+            #     }
+            # ),
             'firstname': forms.Textarea(attrs={'rows': 1, 'cols': 35,
                                                 'placeholder':
                                                 'Firstame(required)',
