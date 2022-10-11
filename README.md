@@ -29,7 +29,6 @@ back individuals in carrying out their day to day activities. When the assessmen
 
 - [Future Features](#future-Features)
 - [Website Surface](#website-Surface)
-    - [Wireframes](#wireframes)
     - [Design Choices](#design-Choice) 
     - [Colour Scheme](#colour-Scheme)
     - [Typography](#typography)
@@ -100,17 +99,34 @@ A user should go through the site like a purposeful journey and to ensure this,
 - The About us page introduces the therapist with four distinctive work complexity and flexibility  approach towards his work and patients.
 
 - Below the pictures, a detailed profile is presented about the teacher to give a background, qualification and honors, versatile experience in different dance forms, work experience, global stage appearances and the development of dance school in Ireland.
+
+![about](/assets/readme-images/about.png)
+
+## What we do
+- what we do page gives full details about the full service ans assessments they provide for the patience with images.
+![what_we_do](/assets/readme-images/what_we.png)
+
+## Appointment 
+- Appointment pages allows to book an appointment
+![book_appointment](/assets/readme-images/book_appointment.png)
+![app_success](/assets/readme-images/app_success.png)
+## Admin 
+- Admin page will show the nav bar when open the appointment page. so the Admin can login in to see the appointments.
+
+![admin.png](/assets/readme-images/admin.png)
+
+### Add an appointment 
+- Admin can add, edit and delete the appointments.
+![list_appointment.png](/assets/readme-images/list_appointment.png)
  
-![about-pic](readme-images/about-pic.png)
-
-![about](/readme-images/about.png)
-
+ Only admin can open the page.
+![not_admin.png](/assets/readme-images/not_admin.png)
 ## Footer
 - The footer is the same on all the three pages.
 - The footer has social media links.
 - To enable better user experience each social media link in the footer opens in a new tab.
 
-![footer](/readme-images/footer.png))
+![footer](/assets/readme-images/footer.png)
 
 ## Technologies Used
 
@@ -164,15 +180,6 @@ A user should go through the site like a purposeful journey and to ensure this,
 - A secure payment section can be added to allow online fee payment.
 - The syllabus can be added for students for their reference.
 # Website Surface
-## Wireframes
-### Desktop
-- [Home](/readme-images/home-d.png)
-- [About](/readme-images/about-desk.png)
-- [contact](/readme-images/contact-d.png)
-### Mobile
-- [Home](/readme-images/home-m.png)
-- [About](/readme-images/about-m.png)
-- [Contact](/readme-images/contact-m.png)
 ## Design Choices
 ### Colour Scheme
 ![color-scheme](/readme-images/colour-scheme.png)
@@ -182,13 +189,13 @@ A user should go through the site like a purposeful journey and to ensure this,
 ![ccc1](/readme-images/ccc1.png)
 
 ### Typography
-There were two fonts used in this website. [Playfair](https://fonts.google.com/specimen/Playfair+Display) font was used for body and header. [Inria Serif](https://fonts.google.com/specimen/Inria%20Serif)  font was used for the navigation menu.
+
 # Testing
 ## Code validation
 ### Html
-![Html](/readme-images/html.png)
+![Html]()
 ### Css
-![Css](/readme-images/css-validator.png)
+![Css]()
 ## Light house
 ### Desktop
 ![lighthouse-d](/readme-images/lighthouse-d.png)
@@ -196,18 +203,10 @@ There were two fonts used in this website. [Playfair](https://fonts.google.com/s
 ![lighthouse-m](/readme-images/lighthouse-m.png)
 ## Responsive testing
 Responsiveness was checked using Google Chrome Dev Tools, desktop, mobile, tablet and laptop for all screen sizes with optimum resolutions.
-## Accessibility testing
-![Ally](/readme-images/ally.png)
-## Manual testing
-Manual testing was carried out in addition to automated process.
-
-I did a manual test to verify that the website functions well in various browsers like Safari, Google Chrome and Firefox.
-
-I manually tested the functions of navigation menu, header, all the three pages, pictures in the gallery, contact form submission with a response and footer links are working at optimised level.
 
 ## Bug fixing
 
-On Gitpod terminal, I couldn’t git commit and push my work. After a few unsuccessful attempts I reached my tutor who kindly helped me to fix conflicts in index.html and style.css by accepting current changes.
+i faced my issues during this project and with help of resourcing the source fron google, tutor support i fixed it. i mentioned few bugs here.
 
 ![bug.png](/readme-images/bug.png)
 
@@ -216,10 +215,11 @@ On HTML validation I got a prompt that a section is lacking a Heading. I followe
 ![bug-2.png](/readme-images/bug-2.png)
 
 # Technology Used
-- HTML5 - designs the structure and content for the website.
-- CSS3 - presents the style for the website.
-- [canva](https://www.canva.com/) - a graphic design App was used to design the art border on the home page and to edit the pictures used in the website.
-- [wix](www.wix.com) software was used to design the symbol and the texts in the logo.
+- [HTML5] - designs the structure and content for the website.
+
+- [CSS3] - presents the style for the website.
+
+- [canva](https://www.canva.com/) - a graphic design App was used to design the logo. 
 
 - [PicResize](https://picresize.com/) tool was used to resize and crop the pictures used in this website.
 
@@ -231,20 +231,102 @@ On HTML validation I got a prompt that a section is lacking a Heading. I followe
 Bootstrap was used to style and design the contact page.
 # Deployment
 Deployment of this website was done through GitHub pages using the following methods:
+* # Deployments
+* Git and GitHub are used for version control. Python is the backend language, and can't be displayed with GitHub alone, To live preview my project, I used Heroku.
+ * ### Deployment Steps On Heroku.
+    -  In my project i've used Django v3.2, so I used this command `pip3 install 'django<4' gunicorn` to install django.
+    - So inside the terminal added these libraries:  
+        `pip3 install dj_database_url psycopg2`,  
+        `pip3 install dj3-cloudinary-storage`
+    - Created requirements.txt file where I can save all the libraries i've installed:  
+        `pip3 freeze --local > requirements.txt`
+    - To create my project typed this command:  
+        `django-admin startproject dentist`
+    - To create my app:  
+        `python3 manage.py startapp booking_app`
 
-- Click on the Settings tab in the GitHub repository.
-- Scroll down to the pages tab.
-- Check for the Source tab and click the Main branch.
-- Click Save.
-- After clicking Save, it can take some time to get a deployed link.
+    - To make this app work, Into the setting.py file inside `INSTALLED_APPS` added `booking_app`
+    - To migrate changes typed this command:  
+        `python3 manage.py migrate`
+    - To run the test if the project is working `python3 manage.py runserver`
 
-# Credits
-- All images in Gallery and About us page of the website were from our Dance school’s archive and I like to give credits to my students and their parents for giving me the consent to use the pictures for this website.
+    - When deploying for the first time on Heroku, you must first register with Heroku.
+    - Create your project name and location.
+    - To add Database into the app, Locate in the Resources Tab, Add-ons, search and add 'Heroku Postgres'
+    - Copy DATABASE_URL value, by going into the Settings Tab, click reveal Config Vars, Copy Text
+    - In your workspace Create new env.py file.
+    - Import os library:  
+            `import os`
+    - Set environment variables:  
+            `os.environ["DATABASE_URL"] = "Heroku DATABASE_URL"`
+    - Add in secret key:  
+            `os.environ["SECRET_KEY"] = "mysecretkey"`
+    - Add Secret Key to Config Vars in Heroku settings:  
+            `SECRET_KEY, "mysecretkey"`
 
-- I learned a lot online via a few YouTube channels, Code with Ania Kubow, Kevin Powell and Kootkot.
+    - Add env.py file to the settings.py file:  
+            `import os`  
+            `import dj_database_url`
+
+            `if os.path.isfile("env.py"):`  
+                `import env`
+    - Remove the insecure secret key and replace - links to the SECRET_KEY variable on Heroku:  
+            `SECRET_KEY = os.environ.get('SECRET_KEY')`
+
+    - Comment out the old DATABASES variable in setting.py file and add this instead:  
+            `DATABASES = { 'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))}`
+
+    - Save all files and Make Migrations:  
+            `python3 manage.py migrate`
+
+    - Make account with Cloudinary To get static and media files.
+    - From Cloudinary Dashboard, Copy your `CLOUDINARY_URL`:  
+    - Add Cloudinary URL to env.py file:  
+            `os.environ["CLOUDINARY_URL"] = "cloudinary://************************"`
+
+    - Add Cloudinary URL to Heroku Config Vars:  
+            `"cloudinary://************************"`
+
+    - Temperoily add DISABLE_COLLECTSTATIC inside the heroku config Vars:  
+            `DISABLE_COLLECTSTATIC, 1`
+
+    - Add Cloudinary Libraries to settings.py installed apps:  
+            `INSTALLED_APPS = ['cloudinary_storage', 'django.contrib.staticfiles', 'cloudinary']`
+
+    - In the settings.py file under the `STATIC_URL = 'static/'` add:  
+            `STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'`  
+            `STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]`  
+            `STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')`  
+
+            `MEDIA_URL = '/media/'`  
+            `DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'`  
+
+    - Place under the BASE_DIR line in settings.py:  
+            `TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')`
+
+    - Change the templates directory to TEMPLATES_DIR Place within the TEMPLATES array:  
+            `TEMPLATES = [{'DIRS': [TEMPLATES_DIR],],},},]`
+
+    - Add Heroku Hostname to ALLOWED_HOSTS:  
+            `ALLOWED_HOSTS = ["hash-dental-care.herokuapp.com", "localhost"]`
+
+    - Create 3 new folders on top level directory:  
+            media, static, templates
+
+    - Create Procfile on the top level directory and inside the file add this:  
+            `web: gunicorn dentist.wsgi`
+        
+    - before deploying on heroku make sure: 
+            `DEBUG = False`
+            Remove `DISABLE_COLLECTSTATIC` from the config vars.
+
+## Credits
+- All images in this website is provided by the website owner.
+
+- I learned a lot online via a few YouTube channels.
 
 - I like to give credits to the Love Running project by Code Institute and it is a wonderful resource for budding developers.
  
-# Acknowledgement
+## Acknowledgement
 
-I would like to extend my sincere thanks to my mentor, my tutor, cohort facilitator, our cohort members, the slack community and The Code Institute for all the support I received to design and develop the website in conjunction with Full Stack Software Developer Diploma course (e-commerce) at the Code Institute.
+I would like to extend my sincere thanks to my tutor, to my friend Bharathi, cohort facilitator, our cohort members, the slack community and The Code Institute for all the support I received to design and develop the website in conjunction with Full Stack Software Developer Diploma course (e-commerce) at the Code Institute.
