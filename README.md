@@ -174,14 +174,6 @@ A user should go through the site like a purposeful journey and to ensure this,
 - The gallery could be made as a separate page and it could contain video performances of students.
 - A secure payment section can be added to allow online fee payment.
 - The syllabus can be added for students for their reference.
-# Website Surface
-## Design Choices
-### Colour Scheme
-![color-scheme](/readme-images/colour-scheme.png)
-
-![color-c-checker](/readme-images/color-c-checker.png)
-
-![ccc1](/readme-images/ccc1.png)
 
 ### Typography
 I have used Open Sans,'Raleway', sans-serif to create this website.
