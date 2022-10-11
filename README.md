@@ -185,12 +185,6 @@ A user should go through the site like a purposeful journey and to ensure this,
 
 ### Typography
 I have used Open Sans,'Raleway', sans-serif to create this website.
-# Testing
-## Code validation
-### Html
-![Html]()
-### Css
-![Css]()
 ## Responsive testing
 Responsiveness was checked using Google Chrome Dev Tools, desktop, mobile, tablet and laptop for all screen sizes with optimum resolutions.
 
