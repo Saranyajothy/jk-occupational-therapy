@@ -189,30 +189,23 @@ A user should go through the site like a purposeful journey and to ensure this,
 ![ccc1](/readme-images/ccc1.png)
 
 ### Typography
-
+I have used Open Sans,'Raleway', sans-serif to create this website.
 # Testing
 ## Code validation
 ### Html
 ![Html]()
 ### Css
 ![Css]()
-## Light house
-### Desktop
-![lighthouse-d](/readme-images/lighthouse-d.png)
-### Mobile 
-![lighthouse-m](/readme-images/lighthouse-m.png)
 ## Responsive testing
 Responsiveness was checked using Google Chrome Dev Tools, desktop, mobile, tablet and laptop for all screen sizes with optimum resolutions.
 
 ## Bug fixing
 
-i faced my issues during this project and with help of resourcing the source fron google, tutor support i fixed it. i mentioned few bugs here.
-
-![bug.png](/readme-images/bug.png)
-
-On HTML validation I got a prompt that a section is lacking a Heading. I followed the instructions and used h1 elements to fix the issue.
-
-![bug-2.png](/readme-images/bug-2.png)
+I faced my issues during this project and with help of resourcing the source fron google, tutor support i fixed it. i mentioned few bugs here.
+1. I have alot of difficulties to change sqlite to postgres in Heroku. With the help of tutor support i manage to resolve the problem.
+2. When i updated the model, the change did not update in the Heroku, With the help of tutor support i manage to resolve the problem by resetting postgres in Heroku.
+3. I have difficulties in understanding  how to render the templates. Manage to resolve the problem by reviewing the walkthroughs multiple times.
+4. I had two errors in the console Uncaught TypeError: emailjs is undefined and Uncaught ReferenceError: $ is not defined. It is fixed with Tutor Support.<br>
 
 # Technology Used
 - [HTML5] - designs the structure and content for the website.
@@ -231,8 +224,7 @@ On HTML validation I got a prompt that a section is lacking a Heading. I followe
 Bootstrap was used to style and design the contact page.
 # Deployment
 Deployment of this website was done through GitHub pages using the following methods:
-* # Deployments
-* Git and GitHub are used for version control. Python is the backend language, and can't be displayed with GitHub alone, To live preview my project, I used Heroku.
+Git and GitHub are used for version control. Python is the backend language, and can't be displayed with GitHub alone, To live preview my project, I used Heroku.
  * ### Deployment Steps On Heroku.
     -  In my project i've used Django v3.2, so I used this command `pip3 install 'django<4' gunicorn` to install django.
     - So inside the terminal added these libraries:  
