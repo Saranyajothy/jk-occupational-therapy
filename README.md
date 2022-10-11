@@ -7,8 +7,6 @@ back individuals in carrying out their day to day activities. When the assessmen
 
 
 ![responsive](/readme-images/Responsive.png)
-[click here to view the site](
-)
 # Table of contents
 - [Vision](#vision)
 - [User Experience](#user-experience)
